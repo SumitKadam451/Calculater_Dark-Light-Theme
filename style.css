@@ -1,0 +1,151 @@
+
+    * {
+      box-sizing: border-box;
+    }
+    :root {
+      --on: 0;
+      --bg: hsl(calc(200 - (var(--on) * 160)), calc((20 + (var(--on) * 50)) * 1%), calc((20 + (var(--on) * 60)) * 1%));
+      --cord: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
+      --stroke: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
+      --shine: hsla(0, 0%, 100%, calc(0.75 - (var(--on) * 0.5)));
+      --cap: hsl(0, 0%, calc((40 + (var(--on) * 30)) * 1%));
+      --filament: hsl(45, calc(var(--on) * 80%), calc((25 + (var(--on) * 75)) * 1%));
+    }
+    
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+    }
+    .toggle-scene {
+      overflow: visible !important;
+      height: 50vmin;
+      position: absolute;
+    }
+    .toggle-scene__cord {
+      stroke: var(--cord);
+      cursor: move;
+    }
+    .toggle-scene__cord:nth-of-type(1) {
+      display: none;
+    }
+    .toggle-scene__cord:nth-of-type(2),
+    .toggle-scene__cord:nth-of-type(3),
+    .toggle-scene__cord:nth-of-type(4),
+    .toggle-scene__cord:nth-of-type(5) {
+      display: none;
+    }
+    .toggle-scene__cord-end {
+      stroke: var(--cord);
+      fill: var(--cord);
+    }
+    .toggle-scene__dummy-cord {
+      stroke-width: 6;
+      stroke: var(--cord);
+    }
+    .bulb__filament {
+      stroke: var(--filament);
+    }
+    .bulb__shine {
+      stroke: var(--shine);
+    }
+    .bulb__flash {
+      stroke: #f5e0a3;
+      display: none;
+    }
+    .bulb__bulb {
+      stroke: var(--stroke);
+      fill: hsla(calc(180 - (95 * var(--on))), 80%, 80%, calc(0.1 + (0.4 * var(--on))));
+    }
+    .bulb__cap {
+      fill: var(--cap);
+    }
+    .bulb__cap-shine {
+      fill: var(--shine);
+    }
+    .bulb__cap-outline {
+      stroke: var(--stroke);
+    }
+    
+    
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+}
+
+
+
+#display {
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+  }
+
+#display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button#equal {
+    height: 130px;
+} 
+
+
+  /* Colour */
+
+  .calculator.dark {
+    background-color: #030637;
+  }
+
+  .calculator.dark #display {
+    color: #f8fafb;
+  }
+
+  .calculator.dark button#clear {
+    background-color: #D04848;
+    color: #f8fafb;
+  }
+
+  .calculator.dark button.btn-number {
+    background-color: #1B1A55;
+    color: #f8fafb;
+  }
+
+  .calculator.dark button.btn-operator {
+    background-color: #474F7A;
+    color: #f8fafb;
+  }
+  
+  .calculator.dark button.btn-equal {
+    background-color: #40A2D8;
+    color: #ffffff;
+  }
+  
