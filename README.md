@@ -33,7 +33,7 @@
 
 ## Demo
 
-Check out the live demo of [Calculater_Dark-Light-Theme]([https://sumitkadam451.github.io/Calculater_Dark-Light-Theme/](https://codepen.io/Sumit-Kadam/pen/zYbbobX))
+Check out the live demo of [Calculater_Dark-Light-Theme](https://codepen.io/Sumit-Kadam/pen/zYbbobX)
 
 This webiste use free trial version of [MorphSVGPlugin](https://gsap.com/) that why file only works on certain domains like [codepen.io](https://codepen.io/trending) so website might not work on [Github](https://github.com/) domains or work for small amount time.
 
